@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// VARIABLES
+$color-primary: #3eb871;
+$color-white: #fff;
+$color-gray: #e4e4e4;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  -webkit-font-smoothing: antialiased;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+}

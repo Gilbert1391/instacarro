@@ -1,0 +1,15 @@
+.header {
+  height: 7rem;
+  padding: 0 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.flex-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ebebeb;
+  padding: 4rem 8rem;
+}
