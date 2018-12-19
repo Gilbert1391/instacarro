@@ -1,0 +1,4 @@
+{
+  "apiUrl": "https://s3-sa-east-1.amazonaws.com/config.instacarro.com/recruitment/auctions.json",
+  "corsProxy": "https://cors-anywhere.herokuapp.com/"
+}

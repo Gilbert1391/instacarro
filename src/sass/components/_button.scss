@@ -1,0 +1,16 @@
+.btn {
+  width: 100%;
+  padding: 1rem;
+  color: $color-white;
+  background-color: $color-primary;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &--card {
+    margin-top: 1.4rem;
+  }
+}
