@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ data }) => {
+const Card = ({ data, onOffer }) => {
   return (
     <React.Fragment>
       {data.map(c => (
@@ -21,7 +21,15 @@ const Card = ({ data }) => {
               <div className="group-row__col">
                 <p className="group-row__title">Ultima oferta</p>
                 <p className="group-row__text-color group-row__text-color--green">
-                  R$ 29.250
+                  {c.bids.length === 0
+                    ? new Intl.NumberFormat("pt-BR", {
+                        style: "currency",
+                        currency: "BRL"
+                      }).format(0)
+                    : new Intl.NumberFormat("pt-BR", {
+                        style: "currency",
+                        currency: "BRL"
+                      }).format(c.bids[c.bids.length - 1].amount)}
                 </p>
               </div>
             </div>
@@ -33,9 +41,15 @@ const Card = ({ data }) => {
             <div className="group-row group-row--flex">
               <div className="group-row__col">{c.year}</div>
               <div className="group-row__vl">&nbsp;</div>
-              <div className="group-row__col">{`${c.km} km`}</div>
+              <div className="group-row__col">
+                {`${c.km.toLocaleString("pt-BR")} km`}
+              </div>
             </div>
-            <button type="button" className="btn btn--card">
+            <button
+              type="button"
+              className="btn btn--card"
+              onClick={() => onOffer(c)}
+            >
               Fazer oferta
             </button>
           </div>

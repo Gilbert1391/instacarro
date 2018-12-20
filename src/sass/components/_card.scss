@@ -1,13 +1,11 @@
 .card {
   width: calc(100% / 3 - 2rem);
-  // height: 50rem;
   margin: 1rem;
   background-color: $color-white;
   border-radius: 5px;
   overflow: hidden;
 
   &__thumbnail {
-    // height: 45%;
     height: 22rem;
     width: 100%;
     position: relative;
@@ -43,7 +41,6 @@
 
   &--flex {
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 
