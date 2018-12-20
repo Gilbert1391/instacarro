@@ -1,13 +1,17 @@
 import React from "react";
-import user from "../assets/user.png";
-import caret from "../assets/caret.png";
+import userIcon from "../assets/user.png";
+import caretDown from "../assets/caret.png";
 
 const UserNav = () => {
   return (
     <nav className="user-nav">
-      <img src={user} alt="User" className="user-nav__user-photo" />
+      <img src={userIcon} alt="User" className="user-nav__user-photo" />
       <span>User Test</span>
-      <img src={caret} alt="Down-arrow icon" className="user-nav__down-arrow" />
+      <img
+        src={caretDown}
+        alt="Down-arrow icon"
+        className="user-nav__down-arrow"
+      />
     </nav>
   );
 };

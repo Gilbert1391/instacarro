@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { ClipLoader } from "react-spinners";
 import Axios from "axios";
+import _ from "lodash";
 import Header from "./components/header";
 import Card from "./components/card";
 import config from "./config.json";
@@ -50,23 +51,21 @@ class App extends Component {
   };
 
   render() {
-    const { data } = this.state;
+    const sorted = _.orderBy(this.state.data, ["remainingTime"], ["asc"]);
 
-    if (data.length === 0)
+    if (sorted.length === 0)
       return (
         <div className="center">
           <ClipLoader color={"#3eb871"} />
         </div>
       );
 
-    console.log(data[0].bids);
-
     return (
       <React.Fragment>
         <ToastContainer />
         <Header />
         <main className="flex-grid">
-          <Card data={data} onOffer={this.handleOffer} />
+          <Card data={sorted} onOffer={this.handleOffer} />
         </main>
       </React.Fragment>
     );

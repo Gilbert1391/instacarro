@@ -1,4 +1,5 @@
 import React from "react";
+import Countdown from "react-countdown-now";
 
 const Card = ({ data, onOffer }) => {
   return (
@@ -14,7 +15,10 @@ const Card = ({ data, onOffer }) => {
               <div className="group-row__col">
                 <p className="group-row__title">Tempo restante</p>
                 <p className="group-row__text-color group-row__text-color--orange">
-                  15:55:55
+                  <Countdown
+                    date={Date.now() + c.remainingTime}
+                    daysInHours={true}
+                  />
                 </p>
               </div>
               <div className="group-row__vl">&nbsp;</div>
