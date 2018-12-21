@@ -22,6 +22,7 @@ class App extends Component {
       console.log("Logging the error", ex);
       toast.error("An unexpected error ocurred.");
     }
+    setInterval(() => this.startDecrementTimer(), 1000);
   }
 
   handleOffer = auction => {
@@ -49,6 +50,12 @@ class App extends Component {
       ];
     }
 
+    this.setState({ data });
+  };
+
+  startDecrementTimer = () => {
+    const data = [...this.state.data];
+    data.map(el => (el.remainingTime -= 1000));
     this.setState({ data });
   };
 

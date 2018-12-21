@@ -16,8 +16,9 @@ const Card = ({ data, onOffer }) => {
                 <p className="group-row__title">Tempo restante</p>
                 <p className="group-row__text-color group-row__text-color--orange">
                   <Countdown
-                    date={Date.now() + c.remainingTime}
+                    date={c.remainingTime}
                     daysInHours={true}
+                    controlled={true}
                   />
                 </p>
               </div>
