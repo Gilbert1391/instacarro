@@ -44,7 +44,9 @@ const Card = ({ data, onOffer }) => {
             </div>
             <div className="group-row group-row--flex">
               <div className="group-row__col">{c.year}</div>
-              <div className="group-row__vl">&nbsp;</div>
+              <div className="group-row__vl group-row__vl--centered">
+                &nbsp;
+              </div>
               <div className="group-row__col">
                 {`${c.km.toLocaleString("pt-BR")} km`}
               </div>

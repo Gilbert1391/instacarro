@@ -28,24 +28,26 @@ class App extends Component {
     const data = [...this.state.data];
     const index = data.indexOf(auction);
 
-    data[index].bids.length === 0
-      ? (data[index].bids = [
-          {
-            amount: 250,
-            dealership: "Instacarro",
-            createdAt: new Date().toISOString(),
-            channel: "Web"
-          }
-        ])
-      : (data[index].bids = [
-          ...data[index].bids,
-          {
-            amount: auction.bids[auction.bids.length - 1].amount + 250,
-            dealership: "Instacarro",
-            createdAt: new Date().toISOString(),
-            channel: "Web"
-          }
-        ]);
+    if (data[index].bids.length === 0) {
+      data[index].bids = [
+        {
+          amount: 250,
+          dealership: "Instacarro",
+          createdAt: new Date().toISOString(),
+          channel: "Web"
+        }
+      ];
+    } else {
+      data[index].bids = [
+        ...data[index].bids,
+        {
+          amount: auction.bids[auction.bids.length - 1].amount + 250,
+          dealership: "Instacarro",
+          createdAt: new Date().toISOString(),
+          channel: "Web"
+        }
+      ];
+    }
 
     this.setState({ data });
   };

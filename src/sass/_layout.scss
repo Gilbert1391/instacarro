@@ -4,6 +4,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  @include responsive(tab-land) {
+    padding: 0 4rem;
+  }
+
+  @include responsive(tab-port) {
+    padding: 0 2rem;
+  }
 }
 
 .flex-grid {
@@ -12,7 +20,20 @@
   display: flex;
   flex-wrap: wrap;
   background-color: #ebebeb;
-  padding: 4rem 8rem;
+  padding: 2.5rem 8rem;
+
+  @include responsive(tab-land) {
+    padding: 2.5rem 4rem;
+  }
+
+  @include responsive(tab-port) {
+    padding: 2rem;
+  }
+
+  @include responsive(phone) {
+    justify-content: center;
+    padding: 1rem;
+  }
 }
 
 .center {

@@ -5,16 +5,28 @@
 
   &__logo {
     height: 4rem;
+
+    @include responsive(phone) {
+      height: 2.5rem;
+    }
   }
 
   &__icon {
     height: 3rem;
     margin-right: 1rem;
+
+    @include responsive(phone) {
+      height: 2rem;
+    }
   }
 
   &__vl {
     height: 60%;
     margin: 0 4rem;
     border-left: 2px solid $color-gray;
+
+    @include responsive(phone) {
+      margin: 0 1rem;
+    }
   }
 }
